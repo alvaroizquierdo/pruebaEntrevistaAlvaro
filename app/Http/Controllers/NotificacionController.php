@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Providers\NotificationService;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\NotificationServiceProvider;
 
 class NotificacionController extends Controller
 {
-    //
+    public function sendNotification(){
+        NotificationService::notify("Alvaro Izquierdo", \SmtpProvider::class);
+    }
 }
