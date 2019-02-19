@@ -8,7 +8,7 @@ use Illuminate\Notifications\NotificationServiceProvider;
 
 class NotificacionController extends Controller
 {
-    public function sendNotification(){
+    public function sendNotification(){ //Método
         NotificationService::notify("Alvaro Izquierdo", \SmtpProvider::class);
     }
 }
